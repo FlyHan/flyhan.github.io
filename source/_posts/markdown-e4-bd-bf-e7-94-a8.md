@@ -1,0 +1,105 @@
+---
+title: markdown使用
+tags:
+  - html
+  - markdown
+id: 55
+categories:
+  - 玩 | 博客
+date: 2014-05-18 13:28:40
+---
+
+[code lang="text" padlinenumbers="false"]
+这里面的是原文
+[/code]
+
+直接显示的是markdown的效果
+
+#### 1.轻松书写格式优美的笔记
+
+[code lang="text" padlinenumbers="false"]
+# 标题1
+## 标题2
+### 标题3
+[/code]
+
+# 标题1
+
+## 标题2
+
+### 标题3
+
+[code lang="text"]
+- 列表1
+测试
+- 列表2
+- 列表3
+[/code]
+
+*   列表1
+*   测试<li>
+<li>列表2
+*   列表3
+
+[code lang="text"]
+*我是斜体*
+测试文字里面，**我是粗体**，很简单
+__我是粗体__
+水平线
+----------------------------
+如果文字后面紧跟着水平线，看看是什么效果
+---------------------
+[/code]
+
+_我是斜体_
+
+测试文字里面，**我是粗体**，很简单
+
+**我是粗体**
+
+水平线
+
+**如果文字后面紧跟着水平线，看看是什么效果**
+
+#### 2.人性化的操作体验：
+
+**a. 自动纠正错误的排序：**
+[code lang="text"]
+1\. 列表1
+2\. 列表2
+3\. 列表3
+5\. 顺序错了不用担心
+3\. 写错的列表，会自动纠正 
+[/code]
+
+1\. 列表1 
+
+2\. 列表2 
+
+3\. 列表3 
+
+4\. 顺序错了不用担心 
+
+5\. 写错的列表，会自动纠正
+
+**b. 拖动图片便可轻松添加到笔记里，再也不用那么麻烦的通过如 "![hello world](./pic/helloworld.jpg)" 这种路径来实现
+**
+
+[![wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce24700.jpg](http://www.flyhan.com/wp-content/uploads/2014/05/wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce247001-300x152.jpg)](http://www.flyhan.com/wp-content/uploads/2014/05/wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce247001.jpg)
+
+**c. 漂亮的代码，还可以自动高亮。这对于程序猿而言，应该是最爱的了吧**
+
+[code lang="cpp"]
+int i = 0;
+i = 1;
+for (int i = 0; i &lt; 100; i++)
+{
+    printf(&quot;hello markdown!\n&quot;);
+}
+[/code]
+
+* * *
+
+#### 2014.8.31更新
+
+后来觉得markdown本地写的跟WordPress后台的标准不一样，而且不能控制颜色（估计是自己没深入研究），嫌麻烦，就直接舍弃了Markdown，手动html输入了，这篇博客只是调了一下显示格式，html控制的，有些部分可能不符合Markdown标准。
