@@ -69,5 +69,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:flyhan/flyhan.git@github.io.git
+  repo: git@github.com:flyhan/flyhan.github.io.git
   branch: master
