@@ -329,7 +329,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8yODkzNS81NTA0
 
 # Baidu Share
 # Available value:
@@ -358,7 +358,7 @@ changyan:
 #yandex_site_verification:
 
 # CNZZ count
-#cnzz_siteid:
+cnzz_siteid: 1000431090
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
