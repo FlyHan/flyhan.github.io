@@ -71,3 +71,9 @@ deploy:
   type: git
   repo: git@github.com:flyhan/flyhan.github.io.git
   branch: master
+
+# algolia
+algolia:
+  applicationID: 'N912RKFOEA'
+  apiKey: '46f163795b0cb538c8d4482ecc3abc3a'
+  indexName: 'dev_hexo'
