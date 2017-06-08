@@ -20,7 +20,7 @@ tags:
 ##### 1\. 利用C语言语法。在头文件中声明，在C文件中真正定义它。
 
 这样可以隐藏内部信息，因为外部不知道对象所占内存的大小，所以不能静态的创建该类的对象，只能调用类提供的创建函数才能创建。这种方法的缺陷是不支持继承，因为子类中得不到任何关于父类的信息。
-[code lang="cpp"]
+```c
 //头文件：point.h
 #ifndef POINT_H
 #define POINT_H 
@@ -46,13 +46,13 @@ void free_point(point *point_)
         return; 
     free(point_);
 }
-[/code]
+```
 
 ##### 2\. 把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。
 
 在 QT 中，为了更好的隐藏一个类的具体实现，一般是一个公开头文件、一个私有头文件，私有头文件中定义实现的内部细节，公开头文件中定义开放给客户程序员的接口和公共数据。看看QObject(qobject.h)，对应有一个QObjectPrivate(qobject_ p.h)，其他的也类似。而代码框架如下：
 
-[code lang="cpp"]
+```c
 QObject{
 public: 
     xxx
@@ -60,11 +60,11 @@ public:
 private:
     QObjectPrivate * priv;
 };
-[/code]
+```
 
 我们在 C 语言中完全可以用同样的方法来实现封装和隐藏，只不过是放在结构体中而已。代码框架如下：
 
-[code lang="cpp"]
+```c
 struct st_abc_private;   
 struct st_abc {   
     int a;   
@@ -72,23 +72,23 @@ struct st_abc {
     void (*xyz_func)(struct st_abc*);   
     struct st_abc_private * priv;   
 };
-[/code]
+```
 
-上面的代码，我们只前向声明结构体struct st_abc_ private ，没人知道它里面具体是什么东西。假如struct st_abc对应的头文件是abc.h，那么把st_abc_ private的声明放在 abc_p.h 中，abc.c 文件包含 abc_p.h ，那么 在实现struct st_abc的函数指针xyz_func时如何使用struct st_abc_private，客户程序员根本无须知道。
+上面的代码，我们只前向声明结构体struct st\_abc\_ private ，没人知道它里面具体是什么东西。假如struct st\_abc对应的头文件是abc.h，那么把st\_abc\_ private的声明放在 abc\_p.h 中，abc.c 文件包含 abc\_p.h ，那么 在实现struct st\_abc的函数指针xyz\_func时如何使用struct st\_abc\_private，客户程序员根本无须知道。
 
 这样做的好处是显而易见的，除了预定义好的接口，客户程序员完全不需要知道实现细节，即便实现经过重构完全重来，客户程序员也不需要关注，甚至相应的模块连重新编译都不要—— 因为 abc.h 自始至终都没变过。
 
-上面代码有个问题，客户程序员如何得到struct st_abc的一个实例，他不知道struct st_abc_private如何实现的。C中没有构造函数，只好我们自己提供了：我们可以在abc.h中声明一个类似构造函数的函数来生成struct st_abc的实例，名字就叫作new_abc()，函数原型如下：
+上面代码有个问题，客户程序员如何得到struct st\_abc的一个实例，他不知道struct st\_abc\_private如何实现的。C中没有构造函数，只好我们自己提供了：我们可以在abc.h中声明一个类似构造函数的函数来生成struct st\_abc的实例，名字就叫作new\_abc()，函数原型如下：
 
-[code lang="cpp"]
+```c
 struct st_abc * new_abc();
-[/code]
+```
 
 至于实现，我们放在abc.c中，客户程序员不需要知道。相应的，还有个类似析构函数的函数，原型如下：
 
-[code lang="cpp"]
+```
 void delete_abc(struct st_abc *);
-[/code]
+```
 
 到现在为止，封装和隐藏就实现了，而且很彻底。
 
@@ -98,7 +98,7 @@ void delete_abc(struct st_abc *);
 
 具体来讲就是利用结构体的包含关系实现继承。
 
-[code lang="cpp"]
+```c
 struct st_base{
     int a;
     void (*func1)(struct st_base *_this);        //------------②
@@ -108,7 +108,7 @@ struct st_derived{
     int b;
     void (*func2)(struct st_derived *_this);    //---------------②
 };
-[/code]
+```
 
 代码就是这么简单，不过需要特别指出：
 
@@ -116,7 +116,7 @@ struct st_derived{
 
 继承在语法层面上看，有数据成员、函数，数据成员通过上面的方法自动就“继承” 了，至于函数，在结构体表示为函数指针，其实也是一个数据成员，是个指针而已，也会自动“继承” 。
 
-##### ②--_this指针的模拟
+##### ②--\_this指针的模拟
 
 必须将结构体内的函数指针的第一个参数定义为自身的指针，在调用时传入函数指针所属的结构体实例。
 
@@ -126,9 +126,9 @@ C++: this 指针是一个隐含于每一个类的成员函数中的特殊指针 
 
 #### 三、多态
 
-C语言中使用万能指针void*实现多态，**注意使用强制类型转换**
+C语言中使用万能指针void`*`实现多态，**注意使用强制类型转换**
 
-[code lang="cpp"]
+```c
 #ifndef LINKLIST_H 
 #define LINKLIST_H 
 typedef struct Node* linkList; 
@@ -205,7 +205,7 @@ void charLinkListOutput(linkList h)
     } 
     printf(&quot;\n&quot;);  
 }
-[/code]
+```
 
 #### 总结
 
