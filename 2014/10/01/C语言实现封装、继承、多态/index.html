@@ -1,0 +1,932 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="做一些大的系统级程序的话不得不说面向对象方法的魅力无穷。一直以为C语言是面向过程的，接触嵌入式系统之后发现C语言也可以实现面向对象。（主要还是自己的思维方式，不要一头钻进代码，培养自己自上而下，从设计开始的思维才是核心）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言实现封装、继承、多态">
+<meta property="og:url" content="http://yoursite.com/2014/10/01/C语言实现封装、继承、多态/index.html">
+<meta property="og:site_name" content="行者">
+<meta property="og:description" content="做一些大的系统级程序的话不得不说面向对象方法的魅力无穷。一直以为C语言是面向过程的，接触嵌入式系统之后发现C语言也可以实现面向对象。（主要还是自己的思维方式，不要一头钻进代码，培养自己自上而下，从设计开始的思维才是核心）">
+<meta property="og:updated_time" content="2017-06-08T14:42:35.549Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C语言实现封装、继承、多态">
+<meta name="twitter:description" content="做一些大的系统级程序的话不得不说面向对象方法的魅力无穷。一直以为C语言是面向过程的，接触嵌入式系统之后发现C语言也可以实现面向对象。（主要还是自己的思维方式，不要一头钻进代码，培养自己自上而下，从设计开始的思维才是核心）">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'N912RKFOEA',
+      apiKey: '46f163795b0cb538c8d4482ecc3abc3a',
+      indexName: 'dev_hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/10/01/C语言实现封装、继承、多态/"/>
+
+
+
+
+
+  <title>C语言实现封装、继承、多态 | 行者</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1000431090&web_id=1000431090" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行者</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wiki">
+          <a href="/wiki" rel="section">
+            
+            wiki
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜一下
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/10/01/C语言实现封装、继承、多态/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fly Han">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行者">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C语言实现封装、继承、多态</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-10-01T00:24:22+08:00">
+                2014-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/累-技术/" itemprop="url" rel="index">
+                    <span itemprop="name">累 | 技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2014/10/01/C语言实现封装、继承、多态/" class="leancloud_visitors" data-flag-title="C语言实现封装、继承、多态">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>做一些大的系统级程序的话不得不说面向对象方法的魅力无穷。一直以为C语言是面向过程的，接触嵌入式系统之后发现C语言也可以实现面向对象。（主要还是自己的思维方式，不要一头钻进代码，培养自己自上而下，从设计开始的思维才是核心）</p><p></p>
+<a id="more"></a>
+<h4 id="一、封装"><a href="#一、封装" class="headerlink" title="一、封装"></a>一、封装</h4><p></p><p>所谓封装，通俗地说，就是一个姑娘化了妆，只给你看她想让你看的那一面，至于里面是否刮了骨、垫了东 西，不给你看。说到封装就得说隐藏，这是对兄弟概念；其实我理解隐藏是更深的封装，完全不给你看见，而封装可能是犹抱琵琶半遮面。封装在 C++ 语言中有protected, private关键字在语言层面上支持。</p>
+<p>而在C语言中，<strong>可以用结构+ 函数指针实现封装和隐藏，来模拟类的实现</strong>，而用这种结构定义的变量就是对象。封装的主要含义是隐藏内部的行为和信息，使用者只用看到对外提供的接口和公开的信息。有两种方法实现封装：</p>
+<h5 id="1-利用C语言语法。在头文件中声明，在C文件中真正定义它。"><a href="#1-利用C语言语法。在头文件中声明，在C文件中真正定义它。" class="headerlink" title="1. 利用C语言语法。在头文件中声明，在C文件中真正定义它。"></a>1. 利用C语言语法。在头文件中声明，在C文件中真正定义它。</h5><p>这样可以隐藏内部信息，因为外部不知道对象所占内存的大小，所以不能静态的创建该类的对象，只能调用类提供的创建函数才能创建。这种方法的缺陷是不支持继承，因为子类中得不到任何关于父类的信息。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//头文件：point.h</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> POINT_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> POINT_H </span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>;</span> </div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Point</span> <span class="title">point</span>;</span> </div><div class="line"><span class="function">point * <span class="title">new_point</span><span class="params">()</span></span>; <span class="comment">//newer a point object </span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">free_point</span><span class="params">(point *point_)</span></span>;<span class="comment">// free the allocated space </span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> </span></div><div class="line"><span class="comment">//C文件:point.c </span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>”point.h” </span></div><div class="line">strcut Point &#123;</div><div class="line">    <span class="keyword">int</span> x; </div><div class="line">    <span class="keyword">int</span> y; </div><div class="line">&#125;; </div><div class="line"><span class="function">point * <span class="title">new_point</span><span class="params">()</span> </span></div><div class="line">&#123; </div><div class="line">    point * new_point_ = (point *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(point)); </div><div class="line">    <span class="keyword">return</span> new_point_; </div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">free_point</span><span class="params">(point *point_)</span> </span></div><div class="line">&#123; </div><div class="line">    <span class="keyword">if</span>(point_ == <span class="literal">NULL</span>) </div><div class="line">        <span class="keyword">return</span>; </div><div class="line">    <span class="built_in">free</span>(point_);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="2-把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。"><a href="#2-把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。" class="headerlink" title="2. 把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。"></a>2. 把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。</h5><p>在 QT 中，为了更好的隐藏一个类的具体实现，一般是一个公开头文件、一个私有头文件，私有头文件中定义实现的内部细节，公开头文件中定义开放给客户程序员的接口和公共数据。看看QObject(qobject.h)，对应有一个QObjectPrivate(qobject_ p.h)，其他的也类似。而代码框架如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">QObject&#123;</div><div class="line"><span class="keyword">public</span>: </div><div class="line">    xxx</div><div class="line">    xxx</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    QObjectPrivate * priv;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>我们在 C 语言中完全可以用同样的方法来实现封装和隐藏，只不过是放在结构体中而已。代码框架如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">st_abc_private</span>;</span>   </div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">st_abc</span> &#123;</span>   </div><div class="line">    <span class="keyword">int</span> a;   </div><div class="line">    xxx;   </div><div class="line">    <span class="keyword">void</span> (*xyz_func)(struct st_abc*);   </div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">st_abc_private</span> * <span class="title">priv</span>;</span>   </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>上面的代码，我们只前向声明结构体struct st_abc_ private ，没人知道它里面具体是什么东西。假如struct st_abc对应的头文件是abc.h，那么把st_abc_ private的声明放在 abc_p.h 中，abc.c 文件包含 abc_p.h ，那么 在实现struct st_abc的函数指针xyz_func时如何使用struct st_abc_private，客户程序员根本无须知道。</p>
+<p>这样做的好处是显而易见的，除了预定义好的接口，客户程序员完全不需要知道实现细节，即便实现经过重构完全重来，客户程序员也不需要关注，甚至相应的模块连重新编译都不要—— 因为 abc.h 自始至终都没变过。</p>
+<p>上面代码有个问题，客户程序员如何得到struct st_abc的一个实例，他不知道struct st_abc_private如何实现的。C中没有构造函数，只好我们自己提供了：我们可以在abc.h中声明一个类似构造函数的函数来生成struct st_abc的实例，名字就叫作new_abc()，函数原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">struct st_abc * <span class="title">new_abc</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+<p>至于实现，我们放在abc.c中，客户程序员不需要知道。相应的，还有个类似析构函数的函数，原型如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">void delete_abc(struct st_abc *);</div></pre></td></tr></table></figure>
+<p>到现在为止，封装和隐藏就实现了，而且很彻底。</p>
+<h4 id="二、继承"><a href="#二、继承" class="headerlink" title="二、继承"></a>二、继承</h4><p>在C语言中，可以利用<strong>结构在内存中的布局与结构的声明具有一致的顺序</strong>这一事实实现继承。</p>
+<p>具体来讲就是利用结构体的包含关系实现继承。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">st_base</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> a;</div><div class="line">    <span class="keyword">void</span> (*func1)(struct st_base *_this);        <span class="comment">//------------②</span></div><div class="line">&#125;;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">st_derived</span>&#123;</span></div><div class="line">    <span class="keyword">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">st_base</span> <span class="title">base</span>;</span>                  <span class="comment">//---------------------①</span></div><div class="line">    <span class="keyword">int</span> b;</div><div class="line">    <span class="keyword">void</span> (*func2)(struct st_derived *_this);    <span class="comment">//---------------②</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>代码就是这么简单，不过需要特别指出：</p>
+<h5 id="①–派生类（结构体）中一定要把父类类型的成员放在第一个。"><a href="#①–派生类（结构体）中一定要把父类类型的成员放在第一个。" class="headerlink" title="①–派生类（结构体）中一定要把父类类型的成员放在第一个。"></a>①–派生类（结构体）中一定要把父类类型的成员放在第一个。</h5><p>继承在语法层面上看，有数据成员、函数，数据成员通过上面的方法自动就“继承” 了，至于函数，在结构体表示为函数指针，其实也是一个数据成员，是个指针而已，也会自动“继承” 。</p>
+<h5 id="②–-this指针的模拟"><a href="#②–-this指针的模拟" class="headerlink" title="②–_this指针的模拟"></a>②–_this指针的模拟</h5><p>必须将结构体内的函数指针的第一个参数定义为自身的指针，在调用时传入函数指针所属的结构体实例。</p>
+<p>C++: this 指针是一个隐含于每一个类的成员函数中的特殊指针 （包括析构函数和构造函数），它用于指向正在被成员函数操作的对象。一个对象的this指针并不是对象本身的一部分，不会影响sizeof(对象)的结果。</p>
+<p>关于this指针的一个经典回答：当你进入一个房子后，你可以看见桌子、椅子、地板等但是房子你是看不到全貌了。</p>
+<h4 id="三、多态"><a href="#三、多态" class="headerlink" title="三、多态"></a>三、多态</h4><p>C语言中使用万能指针void<code>*</code>实现多态，<strong>注意使用强制类型转换</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> LINKLIST_H </span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> LINKLIST_H </span></div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">linkList</span>;</span> </div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span>                                <span class="comment">// 链表节点</span></div><div class="line">    <span class="keyword">void</span> *data;                             <span class="comment">// 存储的数据指针</span></div><div class="line">    linkList next;                          <span class="comment">// 指向下一个链表节点</span></div><div class="line">    <span class="keyword">void</span> (*insertFirst)(linkList, <span class="keyword">void</span> *);  <span class="comment">// 在已有链表的表头进行插入节点操作的函数指针</span></div><div class="line">    <span class="keyword">void</span> (*linkListOutput)(linkList);       <span class="comment">// 输出链表中数据到控制台操作的函数指针</span></div><div class="line">&#125;; </div><div class="line"><span class="function">linkList <span class="title">initialLinklist</span><span class="params">()</span></span>;                 <span class="comment">// 初始化链表</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertFirst</span><span class="params">(linkList h, <span class="keyword">void</span> *data)</span></span>;   <span class="comment">// 在已有链表的表头进行插入节点操作</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">linkListOutput</span><span class="params">(linkList h)</span></span>;            <span class="comment">// 未指定输出类型时的默认输出函数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">stringLinkListOutput</span><span class="params">(linkList h)</span></span>;      <span class="comment">// 输出字符串类型链表中数据到控制台</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">intLinkListOutput</span><span class="params">(linkList h)</span></span>;         <span class="comment">// 输出整型链表中数据到控制台</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">doubleLinkListOutput</span><span class="params">(linkList h)</span></span>;      <span class="comment">// 输出浮点型链表中数据到控制台</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">charLinkListOutput</span><span class="params">(linkList h)</span></span>;        <span class="comment">// 输出字符型链表中数据到控制台</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="comment">//初始化链表，代码如下：</span></div><div class="line"><span class="function">linkList <span class="title">initialLinklist</span><span class="params">()</span> </span></div><div class="line">&#123; </div><div class="line">    linkList link = (linkList*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(*link)); </div><div class="line">    link-&amp;gt;data = <span class="literal">NULL</span>; </div><div class="line">    link-&amp;gt;next = <span class="literal">NULL</span>; </div><div class="line">    link-&amp;gt;insertFirst = insertFirst; </div><div class="line">    link-&amp;gt;linkListOutput = linkListOutput; </div><div class="line">    <span class="keyword">return</span> link; </div><div class="line">&#125;</div><div class="line"><span class="comment">//在已有链表的表头进行插入节点操作</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertFirst</span><span class="params">(linkList h, <span class="keyword">void</span> *data)</span> </span></div><div class="line">&#123; </div><div class="line">    linkList link = initialLinklist(); </div><div class="line">    link-&amp;gt;data = data; </div><div class="line">    link-&amp;gt;next = h-&amp;gt;next; </div><div class="line">    h-&amp;gt;next = link; </div><div class="line">&#125;    </div><div class="line"><span class="comment">//输出链表中数据到控制台</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">linkListOutput</span><span class="params">(linkList h)</span>     </span></div><div class="line">&#123; </div><div class="line">    <span class="built_in">printf</span>(&amp;quot;You should point which output function is wanted!\n&amp;quot;); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">stringLinkListOutput</span><span class="params">(linkList h)</span>    </span></div><div class="line">&#123; </div><div class="line">    linkList p = h-&amp;gt;next; </div><div class="line">    <span class="keyword">while</span>(p)&#123; </div><div class="line">        <span class="built_in">printf</span>(&amp;quot;%s\t&amp;quot;, (<span class="keyword">char</span>*)(p-&amp;gt;data)); </div><div class="line">        p = p-&amp;gt;next; </div><div class="line">    &#125; </div><div class="line">    <span class="built_in">printf</span>(&amp;quot;\n&amp;quot;); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">intLinkListOutput</span><span class="params">(linkList h)</span> </span></div><div class="line">&#123; </div><div class="line">    linkList p = h-&amp;gt;next; </div><div class="line">    <span class="keyword">while</span>(p)&#123; </div><div class="line">        <span class="built_in">printf</span>(&amp;quot;%d\t&amp;quot;, *(<span class="keyword">int</span>*)(p-&amp;gt;data)); </div><div class="line">        p = p-&amp;gt;next; </div><div class="line">    &#125; </div><div class="line">    <span class="built_in">printf</span>(&amp;quot;\n&amp;quot;); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">doubleLinkListOutput</span><span class="params">(linkList h)</span> </span></div><div class="line">&#123; </div><div class="line">    linkList p = h-&amp;gt;next; </div><div class="line">    <span class="keyword">while</span>(p)&#123; </div><div class="line">        <span class="built_in">printf</span>(&amp;quot;%f\t&amp;quot;, *(<span class="keyword">double</span>*)(p-&amp;gt;data)); </div><div class="line">        p = p-&amp;gt;next; </div><div class="line">    &#125; </div><div class="line">    <span class="built_in">printf</span>(&amp;quot;\n&amp;quot;); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">charLinkListOutput</span><span class="params">(linkList h)</span> </span></div><div class="line">&#123; </div><div class="line">    linkList p = h-&amp;gt;next; </div><div class="line">    <span class="keyword">while</span>(p)&#123; </div><div class="line">        <span class="built_in">printf</span>(&amp;quot;%c\t&amp;quot;, *(<span class="keyword">char</span>*)(p-&amp;gt;data)); </div><div class="line">        p = p-&amp;gt;next; </div><div class="line">    &#125; </div><div class="line">    <span class="built_in">printf</span>(&amp;quot;\n&amp;quot;);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>面向对象是一种程序设计思想，而 C 语言则是一种编程语言。思想比语言重要。</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-cpolym/index.html?ca=drs-" target="_blank" rel="external">技巧：用 C 语言实现程序的多态性</a><br><a href="http://dongxicheng.org/cpp/ooc/" target="_blank" rel="external">C语言实现封装、继承和多态</a><br><a href="http://blog.csdn.net/column/details/object-orient-c.html" target="_blank" rel="external">C语言面向对象编程</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/09/23/【笔试】日期间隔多少日/" rel="next" title="【笔试】日期间隔多少日">
+                <i class="fa fa-chevron-left"></i> 【笔试】日期间隔多少日
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/11/02/笔记本升级——内存篇/" rel="prev" title="笔记本升级——内存篇">
+                笔记本升级——内存篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODkzNS81NTA0"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Fly Han" />
+          <p class="site-author-name" itemprop="name">Fly Han</p>
+           
+              <p class="site-description motion-element" itemprop="description">叶的飘落，是风的追求，还是树的不挽留</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、封装"><span class="nav-number">1.</span> <span class="nav-text">一、封装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-利用C语言语法。在头文件中声明，在C文件中真正定义它。"><span class="nav-number">1.1.</span> <span class="nav-text">1. 利用C语言语法。在头文件中声明，在C文件中真正定义它。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。"><span class="nav-number">1.2.</span> <span class="nav-text">2. 把私有数据信息放在一个不透明的priv变量或者结构体中。只有类的实现代码才知道priv或者结构体的真正定义。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、继承"><span class="nav-number">2.</span> <span class="nav-text">二、继承</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#①–派生类（结构体）中一定要把父类类型的成员放在第一个。"><span class="nav-number">2.1.</span> <span class="nav-text">①–派生类（结构体）中一定要把父类类型的成员放在第一个。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#②–-this指针的模拟"><span class="nav-number">2.2.</span> <span class="nav-text">②–_this指针的模拟</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、多态"><span class="nav-number">3.</span> <span class="nav-text">三、多态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fly Han</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bOi9lysutNNlOu0SOg04PT6M-gzGzoHsz", "xofA5njx0sSeC1RukrDaec2h");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
