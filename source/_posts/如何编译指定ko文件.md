@@ -15,6 +15,9 @@ date: 2016-11-30 17:58:42
 ## 二、查找内核模块
 
 1.  搜索模块对应的Makefile，找到编译控制宏obj-$(**CONFIG_HIUSB_DEVICE**)   += dwc_otg.o，搜索方法见下图
+
+<!-- more -->
+
     ![](http://www.flyhan.com/wp-content/uploads/2016/12/f7d55f55fa258407492d7fb79ec13ef8_03b0801663ce43a8ee00ea84cd9dfcfd-1.png)
 2.  搜索宏控制位置（**一般的话宏控制就在对应目录下面的Kconfig，dwc_otg比较特殊**）
     ![](http://www.flyhan.com/wp-content/uploads/2016/12/f7d55f55fa258407492d7fb79ec13ef8_07a90977499e9446a9d8d385c94652cb-1.png)
