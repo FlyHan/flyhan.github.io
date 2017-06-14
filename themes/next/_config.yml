@@ -307,8 +307,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: flyhan
   count: true
 
 # Hypercomments
@@ -329,7 +329,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC8yODkzNS81NTA0
+# livere_uid: MTAyMC8yODkzNS81NTA0
 
 # Baidu Share
 # Available value:
