@@ -14,6 +14,9 @@
     {% elseif theme.vkontakte_api.enable and theme.vkontakte_api.comments %}
       <div id="vk_comments"></div>
     {% elseif theme.disqus.enable %}
+	  <div style="text-align:center;">
+		<button class="btn" id="load-disqus" onclick="disqus.load();">看看disqus评论</button>
+	  </div>
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
