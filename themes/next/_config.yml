@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2014
 
 # icon between year and author @Footer
 authoricon: heart
@@ -141,8 +141,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/flyhan
+  Weibo: http://weibo.com/flyhanx
+  #Zhihu: http://www.zhihu.com/people/flyhan
 
 
 # Social Links Icons
@@ -157,7 +160,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-
+  
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -207,11 +210,13 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
+links:
   #Title: http://example.com/
+  我们的嵌入式: http://ouremb.com/
+  飞向梦: http://www.cnblogs.com/quantumplan
 
 
 # ---------------------------------------------------------------
