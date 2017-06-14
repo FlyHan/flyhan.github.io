@@ -92,12 +92,12 @@
 
 <meta name="description" content="叶的飘落，是风的追求，还是树的不挽留">
 <meta property="og:type" content="website">
-<meta property="og:title" content="行者">
+<meta property="og:title" content="徒行行者">
 <meta property="og:url" content="http://yoursite.com/tags/博客/index.html">
-<meta property="og:site_name" content="行者">
+<meta property="og:site_name" content="徒行行者">
 <meta property="og:description" content="叶的飘落，是风的追求，还是树的不挽留">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="行者">
+<meta name="twitter:title" content="徒行行者">
 <meta name="twitter:description" content="叶的飘落，是风的追求，还是树的不挽留">
 
 
@@ -107,7 +107,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -132,7 +132,7 @@
 
 
 
-  <title>标签: 博客 | 行者</title>
+  <title>标签: 博客 | 徒行行者</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -175,12 +175,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">行者</span>
+        <span class="site-title">徒行行者</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</p>
+        <h1 class="site-subtitle" itemprop="description">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</h1>
       
   </div>
 
@@ -304,8 +304,8 @@
 
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
-      <h1>博客<small>标签</small>
-      </h1>
+      <h2>博客<small>标签</small>
+      </h2>
     </div>
 
     
@@ -314,7 +314,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/2014/05/18/【经验】如何搭建个人博客/" itemprop="url">
               
@@ -322,7 +322,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -374,8 +374,8 @@
                alt="Fly Han" />
           <p class="site-author-name" itemprop="name">Fly Han</p>
            
-              <p class="site-description motion-element" itemprop="description">叶的飘落，是风的追求，还是树的不挽留</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -392,10 +392,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -403,10 +403,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -416,12 +416,50 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/flyhan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/flyhanx" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ouremb.com/" title="我们的嵌入式" target="_blank">我们的嵌入式</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/quantumplan" title="飞向梦" target="_blank">飞向梦</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -445,7 +483,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -555,6 +593,10 @@
 
   
 
+    
+
+  
+
 
 
 
@@ -573,10 +615,6 @@
   
 
 
-
-
-
-  
 
 
 
@@ -712,6 +750,21 @@
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

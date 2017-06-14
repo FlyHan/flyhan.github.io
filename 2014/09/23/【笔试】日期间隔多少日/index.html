@@ -95,7 +95,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="【笔试】日期间隔多少日">
 <meta property="og:url" content="http://yoursite.com/2014/09/23/【笔试】日期间隔多少日/index.html">
-<meta property="og:site_name" content="行者">
+<meta property="og:site_name" content="徒行行者">
 <meta property="og:description" content="之前处理这种题目的时候都是采用数学计算的方法，最近看了一下日期和时间函数库，就打算用库函数实现一下 题目题目描述 从键盘输入两个日期，输出两个日期之间的时间间隔，时间间隔用天数表示。">
 <meta property="og:updated_time" content="2017-06-08T14:41:12.548Z">
 <meta name="twitter:card" content="summary">
@@ -109,7 +109,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -134,7 +134,7 @@
 
 
 
-  <title>【笔试】日期间隔多少日 | 行者</title>
+  <title>【笔试】日期间隔多少日 | 徒行行者</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,12 +177,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">行者</span>
+        <span class="site-title">徒行行者</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</p>
+        <h1 class="site-subtitle" itemprop="description">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</h1>
       
   </div>
 
@@ -323,7 +323,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行者">
+      <meta itemprop="name" content="徒行行者">
     </span>
 
     
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【笔试】日期间隔多少日</h1>
+          <h2 class="post-title" itemprop="name headline">【笔试】日期间隔多少日</h2>
         
 
         <div class="post-meta">
@@ -378,6 +378,17 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2014/09/23/【笔试】日期间隔多少日/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2014/09/23/【笔试】日期间隔多少日/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -518,7 +529,15 @@
           
   <div class="comments" id="comments">
     
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODkzNS81NTA0"></div>
+	  <div style="text-align:center;">
+		<button class="btn" id="load-disqus" onclick="disqus.load();">看看disqus评论</button>
+	  </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -558,8 +577,8 @@
                alt="Fly Han" />
           <p class="site-author-name" itemprop="name">Fly Han</p>
            
-              <p class="site-description motion-element" itemprop="description">叶的飘落，是风的追求，还是树的不挽留</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -576,10 +595,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -587,10 +606,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -600,12 +619,50 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/flyhan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/flyhanx" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ouremb.com/" title="我们的嵌入式" target="_blank">我们的嵌入式</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/quantumplan" title="飞向梦" target="_blank">飞向梦</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -645,7 +702,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -759,6 +816,26 @@
 
   
 
+    
+      <script type="text/javascript">
+        var disqus = {
+		  load : function disqus(){
+			  if(typeof DISQUS !== 'object') {
+				(function () {
+				var s = document.createElement('script'); s.async = true;
+				s.type = 'text/javascript';
+				s.src = 'https://flyhan.disqus.com/embed.js';
+				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				}());
+				$('#load-disqus').remove(); ///加载后移除按钮
+			  }
+		  }
+		}
+      </script>
+    
+
+  
+
 
 
 
@@ -777,21 +854,6 @@
   
 
 
-
-
-
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -927,6 +989,21 @@
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

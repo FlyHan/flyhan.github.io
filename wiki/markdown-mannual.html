@@ -94,10 +94,10 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Markdown语法手册">
 <meta property="og:url" content="http://yoursite.com/wiki/markdown-mannual.html">
-<meta property="og:site_name" content="行者">
+<meta property="og:site_name" content="徒行行者">
 <meta property="og:description" content="Markdown语法手册1.粗体斜体粗体：**粗体** 斜体：*斜体* 粗体：粗体斜体：斜体 2.分级标题#一级标题 ##二级标题 ###三级标题 3.外链接[链接到我的博客](http://www.flyhan.com) 链接到我的博客 4.无序列表使用*, +, - 表示无序列表 * 无序列表1   * 无序列表2 + 1   + 2  无序列表1 无序列表2   1 2  5.有序列表使用数">
 <meta property="og:image" content="http://img1.hao123.com/urlicon/6.340.png">
-<meta property="og:updated_time" content="2017-06-08T13:49:46.542Z">
+<meta property="og:updated_time" content="2017-06-14T14:08:13.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法手册">
 <meta name="twitter:description" content="Markdown语法手册1.粗体斜体粗体：**粗体** 斜体：*斜体* 粗体：粗体斜体：斜体 2.分级标题#一级标题 ##二级标题 ###三级标题 3.外链接[链接到我的博客](http://www.flyhan.com) 链接到我的博客 4.无序列表使用*, +, - 表示无序列表 * 无序列表1   * 无序列表2 + 1   + 2  无序列表1 无序列表2   1 2  5.有序列表使用数">
@@ -110,7 +110,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -135,7 +135,7 @@
 
 
 
-  <title>Markdown语法手册 | 行者</title>
+  <title>Markdown语法手册 | 徒行行者</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,12 +178,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">行者</span>
+        <span class="site-title">徒行行者</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</p>
+        <h1 class="site-subtitle" itemprop="description">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</h1>
       
   </div>
 
@@ -324,7 +324,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行者">
+      <meta itemprop="name" content="徒行行者">
     </span>
 
     
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown语法手册</h1>
+          <h2 class="post-title" itemprop="name headline">Markdown语法手册</h2>
         
 
         <div class="post-meta">
@@ -357,6 +357,17 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/wiki/markdown-mannual.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="wiki/markdown-mannual.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -475,7 +486,43 @@ _   底线
 -   减号  
 .   英文句点  
 !   惊叹号  
-</code></pre><h2 id="4-表格"><a href="#4-表格" class="headerlink" title="4.表格"></a>4.表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">    | Item      |    Value | Qty  |</div><div class="line">    | :-------- | --------:| :--: |</div><div class="line">    | Computer  | 1600 USD |  5   |</div><div class="line">    | Phone     |   12 USD |  12  |</div><div class="line">    | Pipe      |    1 USD | 234  |</div><div class="line">```  </div><div class="line">| Item      |    Value | Qty  |</div><div class="line">| :-------- | --------:| :--: |</div><div class="line">| Computer  | 1600 USD |  5   |</div><div class="line">| Phone     |   12 USD |  12  |</div><div class="line">| Pipe      |    1 USD | 234  |</div><div class="line"></div><div class="line">说明：</div><div class="line"></div><div class="line">1. 首列和最后一列竖线`|`可以省略</div><div class="line">2. 第二行冒号`:`表示对其，左边为左对齐，右边右对齐，两个中间对齐</div><div class="line"></div><div class="line">##5.流程图</div><div class="line"></div><div class="line">```flow</div><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line"> </div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
+</code></pre><h2 id="4-表格"><a href="#4-表格" class="headerlink" title="4.表格"></a>4.表格</h2><pre><code>| Item      |    Value | Qty  |
+| :-------- | --------:| :--: |
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">Item</th>
+<th style="text-align:right">Value</th>
+<th style="text-align:center">Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Computer</td>
+<td style="text-align:right">1600 USD</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">12 USD</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipe</td>
+<td style="text-align:right">1 USD</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<p>说明：</p>
+<ol>
+<li>首列和最后一列竖线<code>|</code>可以省略</li>
+<li>第二行冒号<code>:</code>表示对其，左边为左对齐，右边右对齐，两个中间对齐</li>
+</ol>
+<h2 id="5-流程图"><a href="#5-流程图" class="headerlink" title="5.流程图"></a>5.流程图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line"> </div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
 <p>代码：</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
 </code></pre><p>流程图的语法大体分为两部分：</p>
@@ -495,9 +542,9 @@ _   底线
 <ul>
 <li>使用 <code>-&gt;</code> 来连接两个元素</li>
 <li>对于condition类型，有yes和no两个分支，如示例中的cond(yes)和cond(no)</li>
-<li>每个元素可以制定分支走向，默认向下，也可以用right指向右边，如示例中sub1(right)。<br>##6.序列图</li>
+<li>每个元素可以制定分支走向，默认向下，也可以用right指向右边，如示例中sub1(right)。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
+<h2 id="6-序列图"><a href="#6-序列图" class="headerlink" title="6.序列图"></a>6.序列图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
 <p>代码：</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
 </code></pre>
@@ -554,7 +601,15 @@ _   底线
           
   <div class="comments" id="comments">
     
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODkzNS81NTA0"></div>
+	  <div style="text-align:center;">
+		<button class="btn" id="load-disqus" onclick="disqus.load();">看看disqus评论</button>
+	  </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -594,8 +649,8 @@ _   底线
                alt="Fly Han" />
           <p class="site-author-name" itemprop="name">Fly Han</p>
            
-              <p class="site-description motion-element" itemprop="description">叶的飘落，是风的追求，还是树的不挽留</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -612,10 +667,10 @@ _   底线
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -623,10 +678,10 @@ _   底线
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -636,12 +691,50 @@ _   底线
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/flyhan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/flyhanx" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ouremb.com/" title="我们的嵌入式" target="_blank">我们的嵌入式</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/quantumplan" title="飞向梦" target="_blank">飞向梦</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -659,7 +752,7 @@ _   底线
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown语法手册"><span class="nav-number">1.</span> <span class="nav-text">Markdown语法手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-粗体斜体"><span class="nav-number">1.1.</span> <span class="nav-text">1.粗体斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-分级标题"><span class="nav-number">1.2.</span> <span class="nav-text">2.分级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-外链接"><span class="nav-number">1.3.</span> <span class="nav-text">3.外链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-无序列表"><span class="nav-number">1.4.</span> <span class="nav-text">4.无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-有序列表"><span class="nav-number">1.5.</span> <span class="nav-text">5.有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-文字引用"><span class="nav-number">1.6.</span> <span class="nav-text">6.文字引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-行内代码块"><span class="nav-number">1.7.</span> <span class="nav-text">7.行内代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-代码块"><span class="nav-number">1.8.</span> <span class="nav-text">8.代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-插入图像"><span class="nav-number">1.9.</span> <span class="nav-text">9.插入图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-换行"><span class="nav-number">1.10.</span> <span class="nav-text">10.换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-文字添加横删除线"><span class="nav-number">1.11.</span> <span class="nav-text">11.文字添加横删除线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown进阶语法"><span class="nav-number">2.</span> <span class="nav-text">Markdown进阶语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-生成目录"><span class="nav-number">2.1.</span> <span class="nav-text">1.生成目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-内联HTML标记"><span class="nav-number">2.2.</span> <span class="nav-text">2.内联HTML标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-符号转义"><span class="nav-number">2.3.</span> <span class="nav-text">3.符号转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-表格"><span class="nav-number">2.4.</span> <span class="nav-text">4.表格</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown语法手册"><span class="nav-number">1.</span> <span class="nav-text">Markdown语法手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-粗体斜体"><span class="nav-number">1.1.</span> <span class="nav-text">1.粗体斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-分级标题"><span class="nav-number">1.2.</span> <span class="nav-text">2.分级标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-外链接"><span class="nav-number">1.3.</span> <span class="nav-text">3.外链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-无序列表"><span class="nav-number">1.4.</span> <span class="nav-text">4.无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-有序列表"><span class="nav-number">1.5.</span> <span class="nav-text">5.有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-文字引用"><span class="nav-number">1.6.</span> <span class="nav-text">6.文字引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-行内代码块"><span class="nav-number">1.7.</span> <span class="nav-text">7.行内代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-代码块"><span class="nav-number">1.8.</span> <span class="nav-text">8.代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-插入图像"><span class="nav-number">1.9.</span> <span class="nav-text">9.插入图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-换行"><span class="nav-number">1.10.</span> <span class="nav-text">10.换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-文字添加横删除线"><span class="nav-number">1.11.</span> <span class="nav-text">11.文字添加横删除线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown进阶语法"><span class="nav-number">2.</span> <span class="nav-text">Markdown进阶语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-生成目录"><span class="nav-number">2.1.</span> <span class="nav-text">1.生成目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-内联HTML标记"><span class="nav-number">2.2.</span> <span class="nav-text">2.内联HTML标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-符号转义"><span class="nav-number">2.3.</span> <span class="nav-text">3.符号转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-表格"><span class="nav-number">2.4.</span> <span class="nav-text">4.表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-流程图"><span class="nav-number">2.5.</span> <span class="nav-text">5.流程图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-序列图"><span class="nav-number">2.6.</span> <span class="nav-text">6.序列图</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -681,7 +774,7 @@ _   底线
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -795,6 +888,26 @@ _   底线
 
   
 
+    
+      <script type="text/javascript">
+        var disqus = {
+		  load : function disqus(){
+			  if(typeof DISQUS !== 'object') {
+				(function () {
+				var s = document.createElement('script'); s.async = true;
+				s.type = 'text/javascript';
+				s.src = 'https://flyhan.disqus.com/embed.js';
+				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				}());
+				$('#load-disqus').remove(); ///加载后移除按钮
+			  }
+		  }
+		}
+      </script>
+    
+
+  
+
 
 
 
@@ -813,21 +926,6 @@ _   底线
   
 
 
-
-
-
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -963,6 +1061,21 @@ _   底线
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

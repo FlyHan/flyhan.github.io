@@ -92,13 +92,13 @@
 
 <meta name="description" content="叶的飘落，是风的追求，还是树的不挽留">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
+<meta property="og:title" content="标签">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="行者">
+<meta property="og:site_name" content="徒行行者">
 <meta property="og:description" content="叶的飘落，是风的追求，还是树的不挽留">
-<meta property="og:updated_time" content="2017-05-27T15:37:34.759Z">
+<meta property="og:updated_time" content="2017-06-14T14:08:13.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
+<meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="叶的飘落，是风的追求，还是树的不挽留">
 
 
@@ -108,7 +108,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -133,7 +133,7 @@
 
 
 
-  <title>Tags | 行者</title>
+  <title>标签 | 徒行行者</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -176,12 +176,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">行者</span>
+        <span class="site-title">徒行行者</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</p>
+        <h1 class="site-subtitle" itemprop="description">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</h1>
       
   </div>
 
@@ -306,7 +306,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Tags</h1>
+	<h2 class="post-title" itemprop="name headline">标签</h2>
 
 
 
@@ -314,7 +314,14 @@
 
     
     
-      
+      <div class="tag-cloud">
+        <div class="tag-cloud-title">
+            目前共计 24 个标签
+        </div>
+        <div class="tag-cloud-tags">
+          <a href="/tags/C/" style="font-size: 12px; color: #ccc">C</a> <a href="/tags/IP/" style="font-size: 12px; color: #ccc">IP</a> <a href="/tags/google/" style="font-size: 12px; color: #ccc">google</a> <a href="/tags/html/" style="font-size: 12px; color: #ccc">html</a> <a href="/tags/iPhone6/" style="font-size: 12px; color: #ccc">iPhone6</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ccc">markdown</a> <a href="/tags/win7/" style="font-size: 12px; color: #ccc">win7</a> <a href="/tags/代码/" style="font-size: 12px; color: #ccc">代码</a> <a href="/tags/内存条/" style="font-size: 12px; color: #ccc">内存条</a> <a href="/tags/博客/" style="font-size: 12px; color: #ccc">博客</a> <a href="/tags/双通道/" style="font-size: 12px; color: #ccc">双通道</a> <a href="/tags/固态硬盘/" style="font-size: 12px; color: #ccc">固态硬盘</a> <a href="/tags/国行/" style="font-size: 12px; color: #ccc">国行</a> <a href="/tags/域名/" style="font-size: 12px; color: #ccc">域名</a> <a href="/tags/堆栈/" style="font-size: 12px; color: #ccc">堆栈</a> <a href="/tags/已发布/" style="font-size: 12px; color: #ccc">已发布</a> <a href="/tags/库函数/" style="font-size: 12px; color: #ccc">库函数</a> <a href="/tags/搜索/" style="font-size: 12px; color: #ccc">搜索</a> <a href="/tags/港行/" style="font-size: 12px; color: #ccc">港行</a> <a href="/tags/空间/" style="font-size: 12px; color: #ccc">空间</a> <a href="/tags/笔试/" style="font-size: 30px; color: #111">笔试</a> <a href="/tags/装系统/" style="font-size: 12px; color: #ccc">装系统</a> <a href="/tags/软件/" style="font-size: 12px; color: #ccc">软件</a> <a href="/tags/高亮/" style="font-size: 12px; color: #ccc">高亮</a>
+        </div>
+      </div>
     
   </div>
 
@@ -326,7 +333,15 @@
           
   <div class="comments" id="comments">
     
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODkzNS81NTA0"></div>
+	  <div style="text-align:center;">
+		<button class="btn" id="load-disqus" onclick="disqus.load();">看看disqus评论</button>
+	  </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -357,8 +372,8 @@
                alt="Fly Han" />
           <p class="site-author-name" itemprop="name">Fly Han</p>
            
-              <p class="site-description motion-element" itemprop="description">叶的飘落，是风的追求，还是树的不挽留</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -375,10 +390,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -386,10 +401,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -399,12 +414,50 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/flyhan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/flyhanx" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ouremb.com/" title="我们的嵌入式" target="_blank">我们的嵌入式</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/quantumplan" title="飞向梦" target="_blank">飞向梦</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -428,7 +481,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -538,6 +591,26 @@
 
   
 
+    
+      <script type="text/javascript">
+        var disqus = {
+		  load : function disqus(){
+			  if(typeof DISQUS !== 'object') {
+				(function () {
+				var s = document.createElement('script'); s.async = true;
+				s.type = 'text/javascript';
+				s.src = 'https://flyhan.disqus.com/embed.js';
+				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				}());
+				$('#load-disqus').remove(); ///加载后移除按钮
+			  }
+		  }
+		}
+      </script>
+    
+
+  
+
 
 
 
@@ -556,21 +629,6 @@
   
 
 
-
-
-
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -706,6 +764,21 @@
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
