@@ -1,0 +1,1048 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="博客,域名,空间," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="keywords" content="博客,域名,空间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【经验】如何搭建个人博客">
+<meta property="og:url" content="http://flyhan.com/build-personal-blogs/index.html">
+<meta property="og:site_name" content="徒行行者">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/GD-Logo_boldhead.jpg">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/8.99.png">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy1.png">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy2.png">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/dnspod解析.jpg">
+<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/网站图标.png">
+<meta property="og:updated_time" content="2017-06-08T14:23:45.180Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【经验】如何搭建个人博客">
+<meta name="twitter:image" content="http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'N912RKFOEA',
+      apiKey: '46f163795b0cb538c8d4482ecc3abc3a',
+      indexName: 'dev_hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://flyhan.com/build-personal-blogs/"/>
+
+
+
+
+
+  <title>【经验】如何搭建个人博客 | 徒行行者</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1000431090&web_id=1000431090" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">徒行行者</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">涤净对于过去的留恋和对未来的幻想，深沉地活在具体的每一个时刻里。  ——《禅心 初心》</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wiki">
+          <a href="/wiki" rel="section">
+            
+            wiki
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜一下
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://flyhan.com/build-personal-blogs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fly Han">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="徒行行者">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【经验】如何搭建个人博客</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-05-18T13:14:33+08:00">
+                2014-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/玩-博客/" itemprop="url" rel="index">
+                    <span itemprop="name">玩 | 博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/build-personal-blogs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="build-personal-blogs/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/build-personal-blogs/" class="leancloud_visitors" data-flag-title="【经验】如何搭建个人博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg" alt="blog"></a></p>
+<a id="more"></a>
+<h4 id="1-新建一个博客文件"><a href="#1-新建一个博客文件" class="headerlink" title="1. 新建一个博客文件"></a>1. 新建一个博客文件</h4><p>在搭建博客的过程中，我们需要创建一个文件，用来存储博客的相关信息。这些信息包括域名的信息，主机空间服务器ip，FTP登录名和密码，空间面板登录信息等等，只要是与该博客有关的信息，全部存在这个文件内，方便以后查看。</p>
+<h4 id="2-购买域名-Domain-Name"><a href="#2-购买域名-Domain-Name" class="headerlink" title="2. 购买域名(Domain Name)"></a>2. 购买域名(Domain Name)</h4><p>我是参考链接一的推荐，直接去的godaddy（去他爹），全球最大的域名注册商，且支持支付宝付款，对我们很方便。</p>
+<p><a href="http://www.godaddy.com/" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/GD-Logo_boldhead.jpg" alt="GD Logo_boldhead"></a></p>
+<p>域名后缀推荐买一级域名“.com”，虽然“.com”域名比其他的贵些，但是goDaddy会定期做优惠活动，Google上搜索“goDaddy优惠券”会出现很多相关链接，我的域名是在<a href="http://www.chinacmu.com/" target="_blank" rel="external">Godaddy $8.99 .COM 域名注册优惠码</a>里面8.99刀买了两年。如果选中了喜欢的域名，而暂时没有活动时，不妨加入购物车后等几天，相信你会收到打折邮件的。</p>
+<p><a href="http://www.chinacmu.com/" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/8.99.png" alt="8.99"></a></p>
+<p>另外购买特价域名时有时候用不了支付宝，我是重新登录的才有了，当然也可以准备一张双币信用卡。</p>
+<p>参考：<a href="http://www.dute.me/godaddy-alipay.html" target="_blank" rel="external">GoDaddy不支持支付宝的解决办法</a></p>
+<p>有需要的可以参考：<a href="http://godaddy.idcspy.com/domain-regist" target="_blank" rel="external">如何在GoDaddy注册域名</a></p>
+<h4 id="3-注册一个主机空间-Web-Host"><a href="#3-注册一个主机空间-Web-Host" class="headerlink" title="3. 注册一个主机空间(Web Host)"></a>3. 注册一个主机空间(Web Host)</h4><p>主机空间是存放博客程序的地方，以地理位置划分为内地空间、香港空间和国外空间，内地空间的优点是访问速度快，缺点是需要备案；香港空间访问速度介于内地和国外之间；国外空间访问速度较慢，无需备案。空间的选择看个人情况了，空间大小的话新手几百M足够用了，等以后写的内容多了不够用了再考虑更换。 同样参考链接一推荐，直接买了<a href="http://www.hengtian.cc/" target="_blank" rel="external">衡天小张</a>家的主机</p>
+<h4 id="4-域名解析-DNSPod"><a href="#4-域名解析-DNSPod" class="headerlink" title="4. 域名解析(DNSPod)"></a>4. 域名解析(DNSPod)</h4><p>在goDaddy购买了域名后，goDaddy会帮我们解析这个域名，但是goDaddy解析的域名有时会遭到屏蔽，而且解析的速度也不快，因此一般使用DNSPod来进行解析。使用DNSPod有以下三步：</p>
+<p><strong>a. 在DNSPod添加记录，注册后添加域名。</strong></p>
+<p><strong>b. 修改域名DNS地址为DNSPod的</strong></p>
+<p>登录goDaddy网站，点击“My Account” ，点击“Domain”右侧的“Launch”，进入域名管理页面</p>
+<p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy1.png" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy1.png" alt="godaddy1"></a></p>
+<p>在“NameServers”一栏点击“Manage”</p>
+<p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy2.png" alt="godaddy2"></a></p>
+<p>在弹出的对话框中前两个Name Server处分别填写DNSPod的域名服务“F1G1NS1.DNSPOD.NET”、“F1G1NS2.DNSPOD.NET”。</p>
+<p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png" alt="godaddy3"></a></p>
+<p><strong>c. 将域名指向主机服务器的ip，即在DNSPod中添加“A记录”，注意要添加带“www”的和不带“www”两个记录，添加完后见下图：</strong></p>
+<p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/dnspod解析.jpg" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/dnspod解析.jpg" alt="dnspod解析"></a></p>
+<p>域名解析完后就可以访问了，此时我们在地址栏输入域名后可以看到主机空间上的信息，接下来的事情就是安装WordPress了。</p>
+<p>注：<strong>域名解析完成后要等一段时间才能访问</strong>，我当时郁闷了好长时间</p>
+<h4 id="5-安装WordPress"><a href="#5-安装WordPress" class="headerlink" title="5. 安装WordPress"></a>5. 安装WordPress</h4><p>不同的主机空间有不同的虚拟主机控制系统，安装的过程也不尽相同，但是步骤都是差不多的，我购买的主机空间使用的是cPanel面板，下面就针对cPanel安装wordpress做个简略的介绍。</p>
+<p>a. 登录cPanel面板，找到“数据库”-“MySQL数据库”，创建一个数据库，然后创建用户，将用户添加进数据库，勾选“所有权限”，点击“更改”完成。<strong>注意将数据名密码等信息记录到博客文件</strong></p>
+<p>b. 上传WordPress，从WordPress网站下载最新的WordPress中文版，回到cPanel首页，点击“文件”-“文件管理器”，选择“Web Root”后点击“Go”，选择“上传”，选择刚才下载的压缩包上传。上传完后回到根目录选择压缩包，点击“解压缩”，解压缩完成后在根目录多了一个wordpress的目录，进入这个目录，点击“全选”，然后点击“移动文件”，去掉目录中的wordpress，将文件移动到根目录下。</p>
+<p>后来嫌麻烦我直接使用<a href="http://xiazai.zol.com.cn/detail/14/133429.shtml" target="_blank" rel="external">flashfxp</a></p>
+<p>c. 设置wordpress基本信息，在浏览器访问你的域名，跟着提示点按钮，直到出现输入数据库信息的页面，输入之前创建的数据库信息，至此wordpress就安装完成了。</p>
+<h4 id="6-安装WordPress主题"><a href="#6-安装WordPress主题" class="headerlink" title="6. 安装WordPress主题"></a>6. 安装WordPress主题</h4><p>wordpress安装完成后，需要给博客安装一个主题，也就是我们的页面模板，进入wordpress的管理页面，选择“外观”-“主题”，点击“安装主题”选择主题安装，也可以上传下载其他主题，最好的免费官方主题可以在这里看到：<a href="http://wordpress.org/themes/" target="_blank" rel="external">Free Theme</a>。</p>
+<h4 id="7-设置固定链接"><a href="#7-设置固定链接" class="headerlink" title="7. 设置固定链接"></a>7. 设置固定链接</h4><p>固定链接是指文章的url显示，默认是问号和数字，修改成自定义结构“/%postname%/”可以更好的让搜索引擎找到你的文章。</p>
+<p>设置之前的效果：<a href="http://www.flyhan.com/?p=1" target="_blank" rel="external">http://www.flyhan.com/?p=1</a></p>
+<p>设置之后的效果：<a href="http://www.flyhan.com/archives/1" target="_blank" rel="external">http://www.flyhan.com/archives/1</a></p>
+<blockquote>
+<p>这个设置不论网站打开速度还是SEO都有好处</p>
+<p>详细参考：<a href="http://bigc.at/wp-super-cache.orz" target="_blank" rel="external">WP Super Cache 安装与设置方法</a></p>
+</blockquote>
+<h4 id="8-安装插件"><a href="#8-安装插件" class="headerlink" title="8. 安装插件"></a>8. 安装插件</h4><p>为了更好的使用WordPress，一些好的插件是必不可少的，下面罗列出个人使用中的一些插件。</p>
+<p>1. Akismet Akismet插件可以帮助清除大量的垃圾留言和评论，保持博客的清洁，使用该插件需要用到API key，可以向主机提供商索要。</p>
+<p>2. WP Super Cache 优秀的缓存插件，可以将博客静态化，一方面能够提高SEO排名，另一方面可以提高博客的访问速度，缓解服务器压力。</p>
+<p>3. Google xml Sitemaps 很好的SEO插件，让搜索引擎更好的收录你的站点。</p>
+<p>4. Dynamic To Top 点击回到顶部，文章比较长时很实用，可以自定义显示效果。</p>
+<p>5. WordPress Related Posts 此插件在每篇文章下显示相关文章或随机文章，有利于博客的SEO。</p>
+<p>6. WP-PageNavi 很不错的分页插件，加速快速浏览博客的文章。</p>
+<p>7. WP-markdown 这个是使用markdown写博客需要的插件</p>
+<h4 id="9-添加网站图标"><a href="#9-添加网站图标" class="headerlink" title="9. 添加网站图标"></a>9. 添加网站图标</h4><p>网站图标是显示在URL最前面的小图标，可以进行自定义，获取图标最简单的办法是到网站<a href="http://www.favicon.cc/" target="_blank" rel="external">Favicon.cc</a>下载，或者亲自做一个，网站图标建议使用.ico文件格式。 下载图标后，上传至主机的根目录public_html下，然后进入WordPress后台管理页面，选择“外观”-“编辑”，打开“head.php”，添加下面的代码(确保图标名称为favicon.ico)：</p>
+<p><code>&lt;linkrel=”shortcut icon” href=”favicon.ico”&gt;</code></p>
+<p>保存后刷新页面就可以看到图标了。</p>
+<p><a href="http://www.flyhan.com/wp-content/uploads/2014/05/网站图标.png" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/05/网站图标.png" alt="网站图标"></a></p>
+<hr>
+<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><p><a href="http://www.wutianqi.com/?p=3551" target="_blank" rel="external">【经验】如何搭建个人独立博客</a></p>
+<p><a href="http://www.zhihu.com/question/19594033" target="_blank" rel="external">怎样搭建一个自有域名的 WordPress 博客？</a></p>
+<p><a href="https://www.x-berry.com/domain-name-choice/" target="_blank" rel="external">WordPress博客教程系列</a></p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+            <a href="/tags/域名/" rel="tag"># 域名</a>
+          
+            <a href="/tags/空间/" rel="tag"># 空间</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/markdown-doc/" rel="prev" title="markdown使用">
+                markdown使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+	  <div style="text-align:center;">
+		<button class="btn" id="load-disqus" onclick="disqus.load();">看看disqus评论</button>
+	  </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Fly Han" />
+          <p class="site-author-name" itemprop="name">Fly Han</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/flyhan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/flyhanx" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ouremb.com/" title="我们的嵌入式" target="_blank"  rel="external nofollow">我们的嵌入式</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/quantumplan" title="飞向梦" target="_blank"  rel="external nofollow">飞向梦</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-新建一个博客文件"><span class="nav-number">1.</span> <span class="nav-text">1. 新建一个博客文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-购买域名-Domain-Name"><span class="nav-number">2.</span> <span class="nav-text">2. 购买域名(Domain Name)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-注册一个主机空间-Web-Host"><span class="nav-number">3.</span> <span class="nav-text">3. 注册一个主机空间(Web Host)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-域名解析-DNSPod"><span class="nav-number">4.</span> <span class="nav-text">4. 域名解析(DNSPod)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-安装WordPress"><span class="nav-number">5.</span> <span class="nav-text">5. 安装WordPress</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-安装WordPress主题"><span class="nav-number">6.</span> <span class="nav-text">6. 安装WordPress主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-设置固定链接"><span class="nav-number">7.</span> <span class="nav-text">7. 设置固定链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-安装插件"><span class="nav-number">8.</span> <span class="nav-text">8. 安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-添加网站图标"><span class="nav-number">9.</span> <span class="nav-text">9. 添加网站图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考链接："><span class="nav-number">10.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fly Han</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script type="text/javascript">
+        var disqus = {
+		  load : function disqus(){
+			  if(typeof DISQUS !== 'object') {
+				(function () {
+				var s = document.createElement('script'); s.async = true;
+				s.type = 'text/javascript';
+				s.src = 'https://flyhan.disqus.com/embed.js';
+				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				}());
+				$('#load-disqus').remove(); ///加载后移除按钮
+			  }
+		  }
+		}
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bOi9lysutNNlOu0SOg04PT6M-gzGzoHsz", "xofA5njx0sSeC1RukrDaec2h");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
