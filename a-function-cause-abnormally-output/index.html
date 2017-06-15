@@ -97,12 +97,12 @@
 <meta property="og:url" content="http://flyhan.com/a-function-cause-abnormally-output/index.html">
 <meta property="og:site_name" content="徒行行者">
 <meta property="og:description" content="题目">
-<meta property="og:image" content="http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png">
-<meta property="og:updated_time" content="2017-06-08T14:41:29.623Z">
+<meta property="og:image" content="http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/08/%E5%87%BD%E6%95%B0A%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0B%E7%9A%84%E6%A0%88%E4%B8%AD%E5%B8%A7%E7%BB%93%E6%9E%84.png">
+<meta property="og:updated_time" content="2017-06-15T13:31:05.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【笔试】实现函数使程序输出不正常">
 <meta name="twitter:description" content="题目">
-<meta name="twitter:image" content="http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png">
+<meta name="twitter:image" content="http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/08/%E5%87%BD%E6%95%B0A%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0B%E7%9A%84%E6%A0%88%E4%B8%AD%E5%B8%A7%E7%BB%93%E6%9E%84.png">
 
 
 
@@ -381,17 +381,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/a-function-cause-abnormally-output/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="a-function-cause-abnormally-output/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -429,7 +418,8 @@
 <p><strong>问：如何实现函数fun，使得最后的打印结果不是1 2</strong></p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>题目一眼看上去是内存的问题，因为内存改变了打印结果不正常，又涉及到函数调用，堆栈空间的修改，函数调用栈空间是连续的（如图所示），因此可以直接实现。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> *p = &amp;amp;a;</div><div class="line"></div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * 搜索到y的位置并修改</div><div class="line">	 */</div><div class="line">	<span class="keyword">while</span> (*p != <span class="number">2</span>) &#123;</div><div class="line">		p++;</div><div class="line">	&#125;</div><div class="line">	*p = <span class="number">10</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id=""><a href="#" class="headerlink" title=""></a><a href="http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png" target="_blank" rel="external"><img src="http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png" alt="函数A调用函数B的栈中帧结构"></a></h4><h4 id="发散思维"><a href="#发散思维" class="headerlink" title="发散思维"></a>发散思维</h4><h5 id="方法一：程序终止"><a href="#方法一：程序终止" class="headerlink" title="方法一：程序终止"></a>方法一：程序终止</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> x = <span class="number">10</span>, y = <span class="number">20</span>;</div><div class="line">	<span class="built_in">printf</span>(&amp;quot;x,y%d %d\n&amp;quot;, x, y);</div><div class="line"></div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * 程序退出</div><div class="line">	 */</div><div class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="函数A调用函数B的栈中帧结构"><a href="#函数A调用函数B的栈中帧结构" class="headerlink" title="函数A调用函数B的栈中帧结构"></a>函数A调用函数B的栈中帧结构</h4><p><img src="http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/08/%E5%87%BD%E6%95%B0A%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0B%E7%9A%84%E6%A0%88%E4%B8%AD%E5%B8%A7%E7%BB%93%E6%9E%84.png" alt="img"></p>
+<h4 id="发散思维"><a href="#发散思维" class="headerlink" title="发散思维"></a>发散思维</h4><h5 id="方法一：程序终止"><a href="#方法一：程序终止" class="headerlink" title="方法一：程序终止"></a>方法一：程序终止</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> x = <span class="number">10</span>, y = <span class="number">20</span>;</div><div class="line">	<span class="built_in">printf</span>(&amp;quot;x,y%d %d\n&amp;quot;, x, y);</div><div class="line"></div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * 程序退出</div><div class="line">	 */</div><div class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h5 id="方法二：函数屏蔽"><a href="#方法二：函数屏蔽" class="headerlink" title="方法二：函数屏蔽"></a>方法二：函数屏蔽</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line"><span class="comment">/*</span></div><div class="line">* 屏蔽printf函数</div><div class="line">*/</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> printf</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>说明：#define是预编译指令，在哪个位置都一样</strong></p>
 <hr>
@@ -669,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发散思维"><span class="nav-number">4.</span> <span class="nav-text">发散思维</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一：程序终止"><span class="nav-number">4.1.</span> <span class="nav-text">方法一：程序终止</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法二：函数屏蔽"><span class="nav-number">4.2.</span> <span class="nav-text">方法二：函数屏蔽</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数A调用函数B的栈中帧结构"><span class="nav-number">3.</span> <span class="nav-text">函数A调用函数B的栈中帧结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发散思维"><span class="nav-number">4.</span> <span class="nav-text">发散思维</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一：程序终止"><span class="nav-number">4.1.</span> <span class="nav-text">方法一：程序终止</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法二：函数屏蔽"><span class="nav-number">4.2.</span> <span class="nav-text">方法二：函数屏蔽</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
