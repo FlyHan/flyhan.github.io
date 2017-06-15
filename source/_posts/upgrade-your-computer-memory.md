@@ -21,7 +21,7 @@ CPU：酷睿i3 380 2.53GHz
 芯片组：HM55
 内存：DDR3 1333 2G
 ```
-[![cpu](http://www.flyhan.com/wp-content/uploads/2014/11/cpu.png)](http://www.flyhan.com/wp-content/uploads/2014/11/cpu.png)
+![cpu](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/cpu.png)
 
 图片来源：[Intel® Core™ i3-380M Processor](http://ark.intel.com/zh-cn/products/50178/Intel-Core-i3-380M-Processor-3M-Cache-2_53-GHz)
 
@@ -48,7 +48,7 @@ CPU：酷睿i3 380 2.53GHz
 
 最大容量受两个因素影响：CPU和芯片组。拿我的来说，CPU最高支持内存8G，芯片组HM55输入intel 5系列芯片组，单个插槽支持最大内存4G，总共两个插槽刚好8G。
 
-[![intel](http://www.flyhan.com/wp-content/uploads/2014/11/intel-300x134.png)](http://www.flyhan.com/wp-content/uploads/2014/11/intel.png)
+![intel](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/intel.png)
 
 升级考虑的是：1、现在的电脑性能提升最大支持度；2、现在电脑淘汰（虽然很有感情，没办法，大势所趋）之后，买的硬盘或者内存条还能不能用在新的电脑上（有点贪心），考虑到以上两点买了根4G DDR3内存条（快递到了之后发现是DDR3L）
 
@@ -62,12 +62,12 @@ CPU：酷睿i3 380 2.53GHz
 
 #### 升级之后的效果
 
-[![升级后效果图](http://www.flyhan.com/wp-content/uploads/2014/11/升级后效果图.png)](http://www.flyhan.com/wp-content/uploads/2014/11/升级后效果图.png)
-[![性能](http://www.flyhan.com/wp-content/uploads/2014/11/性能.png)](http://www.flyhan.com/wp-content/uploads/2014/11/性能.png)
+![升级后效果图](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/%E5%8D%87%E7%BA%A7%E5%90%8E%E6%95%88%E6%9E%9C%E5%9B%BE.png)
+![性能](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/%E6%80%A7%E8%83%BD.png)
 
 #### 内存条部分图片
 
-[![DDR3L 4G](http://www.flyhan.com/wp-content/uploads/2014/11/DDR3L-4G-e1414941467225-300x168.jpg)](http://www.flyhan.com/wp-content/uploads/2014/11/DDR3L-4G-e1414941467225.jpg)
+![DDR3L 4G](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/DDR3L-4G-e1414941467225.jpg)
 
 #### 参考
 

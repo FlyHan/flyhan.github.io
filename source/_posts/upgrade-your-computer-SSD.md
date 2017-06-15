@@ -25,8 +25,7 @@ date: 2014-11-05 22:01:23
 4、安装版重装系统。ghost原理：复制操作系统以及硬盘信息，单纯复制操作系统不行，硬盘信息复制才能实现操作系统的完整移植，固态硬盘去模拟机械硬盘的磁道感觉蛋疼，直接重装了。不过补丁包打了好久。。。
 
 最终开机20秒，估计是SATA接口，电脑只支持SATA2，SATA3不支持，速度上不去。
-
-[![三星840 evo](http://www.flyhan.com/wp-content/uploads/2014/11/三星840-evo1-300x233.jpg)](http://www.flyhan.com/wp-content/uploads/2014/11/三星840-evo1.jpg)
+![三星840 evo](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/%E4%B8%89%E6%98%9F840-evo1-1024x797.jpg)
 
 #### SSD常见问题大汇总
 

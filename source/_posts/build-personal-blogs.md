@@ -10,7 +10,7 @@ categories:
 date: 2014-05-18 13:14:33
 ---
 
-[![blog](http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg)](http://www.flyhan.com/wp-content/uploads/2014/05/blog.jpg)
+![blog](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/blog.jpg)
 
 <!-- more -->
 
@@ -22,11 +22,11 @@ date: 2014-05-18 13:14:33
 
 我是参考链接一的推荐，直接去的godaddy（去他爹），全球最大的域名注册商，且支持支付宝付款，对我们很方便。
 
-[![GD Logo_boldhead](http://www.flyhan.com/wp-content/uploads/2014/05/GD-Logo_boldhead.jpg)](http://www.godaddy.com/)
+![GD Logo_boldhead](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/GD-Logo_boldhead.jpg)
 
 域名后缀推荐买一级域名“.com”，虽然“.com”域名比其他的贵些，但是goDaddy会定期做优惠活动，Google上搜索“goDaddy优惠券”会出现很多相关链接，我的域名是在[Godaddy $8.99 .COM 域名注册优惠码](http://www.chinacmu.com/)里面8.99刀买了两年。如果选中了喜欢的域名，而暂时没有活动时，不妨加入购物车后等几天，相信你会收到打折邮件的。
 
-[![8.99](http://www.flyhan.com/wp-content/uploads/2014/05/8.99.png)](http://www.chinacmu.com/)
+![8.99](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/8.99.png)
 
 另外购买特价域名时有时候用不了支付宝，我是重新登录的才有了，当然也可以准备一张双币信用卡。
 
@@ -48,19 +48,19 @@ date: 2014-05-18 13:14:33
 
 登录goDaddy网站，点击“My Account” ，点击“Domain”右侧的“Launch”，进入域名管理页面
 
-[![godaddy1](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy1.png)](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy1.png)
+![godaddy1](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/godaddy1.png)
 
 在“NameServers”一栏点击“Manage”
 
-[![godaddy2](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy2.png)](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png)
+![godaddy2](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/godaddy2.png)
 
 在弹出的对话框中前两个Name Server处分别填写DNSPod的域名服务“F1G1NS1.DNSPOD.NET”、“F1G1NS2.DNSPOD.NET”。
 
-[![godaddy3](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png)](http://www.flyhan.com/wp-content/uploads/2014/05/godaddy3.png)
+![godaddy3](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/godaddy3.png)
 
 **c. 将域名指向主机服务器的ip，即在DNSPod中添加“A记录”，注意要添加带“www”的和不带“www”两个记录，添加完后见下图：**
 
-[![dnspod解析](http://www.flyhan.com/wp-content/uploads/2014/05/dnspod解析.jpg)](http://www.flyhan.com/wp-content/uploads/2014/05/dnspod解析.jpg)
+![dnspod解析](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/dnspod%E8%A7%A3%E6%9E%90.jpg)
 
 域名解析完后就可以访问了，此时我们在地址栏输入域名后可以看到主机空间上的信息，接下来的事情就是安装WordPress了。
 
@@ -119,7 +119,7 @@ wordpress安装完成后，需要给博客安装一个主题，也就是我们�
 
 保存后刷新页面就可以看到图标了。
 
-[![网站图标](http://www.flyhan.com/wp-content/uploads/2014/05/网站图标.png)](http://www.flyhan.com/wp-content/uploads/2014/05/网站图标.png)
+![网站图标](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png)
 
 * * *
 

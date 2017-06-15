@@ -52,7 +52,9 @@ void fun(void)
 }
 ```
 
-#### [![函数A调用函数B的栈中帧结构](http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png)](http://www.flyhan.com/wp-content/uploads/2014/08/函数A调用函数B的栈中帧结构.png)
+#### 函数A调用函数B的栈中帧结构
+
+![img](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/08/%E5%87%BD%E6%95%B0A%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0B%E7%9A%84%E6%A0%88%E4%B8%AD%E5%B8%A7%E7%BB%93%E6%9E%84.png)
 
 #### 发散思维
 

@@ -21,13 +21,13 @@ date: 2014-11-06 22:21:40
 
 微软必应（www.bing.com），打开默认的是必应中国（cn.bing.com），英文必应（global.bing.com）
 
-[![bing](http://www.flyhan.com/wp-content/uploads/2014/11/bing.png)](http://www.flyhan.com/wp-content/uploads/2014/11/bing.png)
+![bing](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/bing.png)
 
 #### 2\. 使用谷歌全球缓存IP（备选）
 
 谷歌在不同的国家有大量不同的IP地址可供访问谷歌，那我们就挨个IP换着用。访问网友制作的“谷歌全球缓存IP”（http://googless.jd-app.com），随意点击一个IP地址，点击亚洲地区的IP地址会快一点，红色代表国家或地区。能不能访问就看你RP了，有的人点一个中一个，有的人怎么换也打不开。愿上帝保佑你！
 
-[![singapore](http://www.flyhan.com/wp-content/uploads/2014/11/singapore.png)](http://www.flyhan.com/wp-content/uploads/2014/11/singapore.png)
+![singapore](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/singapore.png)
 
 #### 3\. 设置Google Hosts
 
@@ -56,13 +56,13 @@ date: 2014-11-06 22:21:40
 
 **发现这哥们软件名字起得太有意思了，贴张图看看**
 
-[![fuckgfw](http://www.flyhan.com/wp-content/uploads/2014/11/fuckgfw.png)](http://www.flyhan.com/wp-content/uploads/2014/11/fuckgfw.png)
+![fuckgfw](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/fuckgfw.png)
 
 #### 4\. 我会说把最容易的放在最后了么
 
 固定IP，我使用：[209.116.186.231](http://209.116.186.231)
 
-[![google](http://www.flyhan.com/wp-content/uploads/2014/11/google.png)](http://www.flyhan.com/wp-content/uploads/2014/11/google.png)
+![google](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/11/google.png)
 
 #### 参考
 

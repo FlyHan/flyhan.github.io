@@ -36,7 +36,7 @@ date: 2014-12-24 22:06:14
 
 3\. 保修。港行iPhone和国行iPhone的售后是不一样的, iPhone保修也出现了不同, 目前iPhone港行机器的保修仅仅可以在Apple Store直营店保修, 第三方维修中心将不再受理维修港行的机器。（据MacX论坛传，从12月8日起，所有的在售国行iPhone均采取只修不换的方式进行售后保修）
 
-[![apple store实体店](http://www.flyhan.com/wp-content/uploads/2014/12/apple-store实体店.png)](http://www.flyhan.com/wp-content/uploads/2014/12/apple-store实体店.png)
+![apple store实体店](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/12/apple-store%E5%AE%9E%E4%BD%93%E5%BA%97.png)
 
 也就是说如果你手持的港版iPhone出现了问题的话，你只能到这些城市的Apple Store去维修，如果你不在上述的这些城市，那你就悲剧了。
 
@@ -46,11 +46,11 @@ date: 2014-12-24 22:06:14
 
 #### 官网手机壳
 
-[![官网手机壳](http://www.flyhan.com/wp-content/uploads/2014/12/官网手机壳-300x169.jpg)](http://www.flyhan.com/wp-content/uploads/2014/12/官网手机壳.jpg)
+![官网手机壳](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/12/%E5%AE%98%E7%BD%91%E6%89%8B%E6%9C%BA%E5%A3%B3.jpg)
 
 #### iPhone开封
 
-[![开封](http://www.flyhan.com/wp-content/uploads/2014/12/开封-300x169.jpg)](http://www.flyhan.com/wp-content/uploads/2014/12/开封.jpg)
+![开封](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/12/%E5%BC%80%E5%B0%81.jpg)
 
 #### 其实只要有一份稳定的收入，过上殷实的生活的是迟早的事情，没有必要为了未来的房子、车子过分降低现在的生活标准。深以为然，自己喜欢的东西，不要总想着等有钱了再去买，等真的有钱了，或许就没有买的心情了。成年后的棉花糖，年老后的春药，买是买得起，但怎么也还原不出当年的味道。
 
@@ -58,7 +58,7 @@ date: 2014-12-24 22:06:14
 
 #### 精致小别针
 
-[![小别针](http://www.flyhan.com/wp-content/uploads/2014/12/小别针-300x169.jpg)](http://www.flyhan.com/wp-content/uploads/2014/12/小别针.jpg)
+![小别针](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/12/%E5%B0%8F%E5%88%AB%E9%92%88.jpg)
 
 #### 参考
 

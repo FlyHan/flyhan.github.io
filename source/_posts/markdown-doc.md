@@ -85,7 +85,7 @@ _我是斜体_
 **b. 拖动图片便可轻松添加到笔记里，再也不用那么麻烦的通过如 "![hello world](./pic/helloworld.jpg)" 这种路径来实现
 **
 
-[![wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce24700.jpg](http://www.flyhan.com/wp-content/uploads/2014/05/wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce247001-300x152.jpg)](http://www.flyhan.com/wp-content/uploads/2014/05/wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce247001.jpg)
+![wpid](http://oblc3hrjc.bkt.clouddn.com/wp-content/uploads/2014/05/wpid-5a035119d817a79cb2d69cdf05ad81e1_1b25851a-e2e8-4568-ad96-cc6f4ce247001.jpg)
 
 **c. 漂亮的代码，还可以自动高亮。这对于程序猿而言，应该是最爱的了吧**
 
